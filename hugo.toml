@@ -1,0 +1,16 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'Genralis AI'
+theme = 'PaperMod'
+
+[params]
+  # Add custom CSS
+  customCSS = ["css/custom.css"]
+
+[outputs]
+  home = ["HTML"]
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
