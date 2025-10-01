@@ -1,0 +1,159 @@
+@import "tailwindcss";
+
+:root {
+  /* background color for pages */
+  --main-bg: #ffffff;
+  --secondary-bg: #f9fafb;
+
+  /* Text Colors */
+  --heading-text: #0e121b;
+  --subheading-text-1: #525866;
+  --subheading-text-2: #2b303b;
+  --body-text-1: #555555;
+
+  /* menu icon colors */
+  --nav-item-text-color: #2b303b;
+  --nav-item-text-active-color: #0e121b;
+  --nav-item-icon-color: #2b303b;
+  --nav-item-icon-active-color: #335cff;
+  --nav-item-bg-active: #f3f5f8;
+
+  /* Theme button */
+  --theme-btn-bg: #0e121b;
+  --theme-btn-bg-hover: #2b303b;
+  --theme-btn-text: #ffffff;
+  --theme-btn-text-hover: #ffffff;
+
+  /* About cards (light) */
+  --about-card-bg: #ffffff;
+  --about-card-bg-hover: #f8fafc;
+  --about-card-text: #0e121b;
+  --about-card-text-hover: #0e121b;
+
+  /* Contact page containers (light) */
+  --container-bg: #ffffff;
+  --container-text: #0e121b;
+
+  /* Home page info cards (dark) */
+  --home-card-bg: #335cff;
+  --home-card-bg-hover: #2547d0;
+  --home-card-text: #fcfcfd;
+  --home-card-text-hover: #ffffff;
+
+  /* Container border */
+  --container-border: #e5e7eb;
+
+  /* Primary Button */
+  --btn-primary-bg: #335cff;
+  --btn-primary-hover-bg: #2547d0;
+  --btn-primary-active-bg: #335cff;
+  --btn-primary-text: #ffffff;
+
+  /* Secondary Button */
+  --btn-secondary-bg: #cacfd8;
+  --btn-secondary-hover-bg: #ebeef8;
+  --btn-secondary-active-bg: #cacfd8;
+  --btn-secondary-text: #525866;
+  --btn-secondary-hover-text: #0e121b;
+  --btn-secondary-active-text: #0e121b;
+  --btn-secondary-border: #cacfd8;
+
+  /* Outlined Button */
+  --btn-outlined-bg: #ffffff;
+  --btn-outlined-text: #0e121b;
+  --btn-outlined-hover-bg: #f2f2f2;
+  --btn-outlined-hover-text: #525866;
+  --btn-outlined-active-bg: #ffffff;
+  --btn-outlined-active-text: #0e121b;
+  --btn-outlined-border: #cacfd8;
+
+  /* Warning Button */
+  --btn-warning-bg: #fb3748;
+  --btn-warning-hover-bg: #e23240;
+  --btn-warning-active-bg: #fb3748;
+  --btn-warning-text: #ffffff;
+
+  /* border color for button when active */
+  --btn-active-border: #0e121b;
+
+  /* Color for disabled buttons */
+  --btn-disabled-bg: #f3f5f8;
+  --btn-disabled-text: #cacfd8;
+
+  /* color for button shadow when active */
+  --btn-inner-shadow-color: #ffffff;
+  --btn-outer-shadow-color: #99a0ae;
+
+  /* text input colors */
+  --input-field-border: #cacfd8;
+  --input-field-label-color: #0e121b;
+  --input-field-subLabel-color: #0e121b;
+  --input-field-info-text: #525866;
+  --input-field-disabled-bg: #f5f7fa;
+  --input-field-hover-bg: #f5f7fa;
+  --input-item-icon-color: #2b303b;
+  /* warning text color */
+  --warning-color: #fb3748;
+
+  /* Divider color */
+  --divider: #e0e4e4;
+}
+
+@layer components {
+  /* 24px / 120% / -0.5px / bold */
+  .text-preset-1 {
+    font-size: 24px;
+    line-height: 120%;
+    letter-spacing: -0.5px;
+    font-weight: 700; /* bold */
+  }
+
+  /* 20px / 120% / -0.5px / bold */
+  .text-preset-2 {
+    font-size: 20px;
+    line-height: 120%;
+    letter-spacing: -0.5px;
+    font-weight: 500; /* bold */
+  }
+
+  /* 16px / 120% / -0.3px / semibold */
+  .text-preset-3 {
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: -0.3px;
+    font-weight: 600; /* semibold */
+  }
+
+  /* 14px / 120% / -0.2px / medium */
+  .text-preset-4 {
+    font-size: 14px;
+    line-height: 120%;
+    letter-spacing: -0.2px;
+    font-weight: 500; /* medium */
+  }
+
+  /* 14px / 120% / 0px / regular */
+  .text-preset-5 {
+    font-size: 14px;
+    line-height: 120%;
+    letter-spacing: 0px;
+    font-weight: 400; /* regular */
+  }
+
+  /* 12px / 120% / -0.2px / regular */
+  .text-preset-6 {
+    font-size: 14px;
+    line-height: 120%;
+    letter-spacing: -0.2px;
+    font-weight: 400; /* regular */
+  }
+
+  /* for large headings for page */
+  /* 12px / 140% / 0px / semibold */
+  .text-preset-7 {
+    font-size: 48px;
+    line-height: 140%;
+    letter-spacing: 0px;
+    font-weight: 500; /* semibold */
+  }
+}
