@@ -1,7 +1,6 @@
 import { useMemo, useState } from "react";
 import { groupByMonth, splitEvents } from "../../utils/events";
 import { EVENTS } from "../../data/events";
-import EmptyState from "./components/EmptyState";
 import TabButton from "./components/TabButton";
 import MonthSection from "./components/MonthSection";
 
@@ -43,7 +42,18 @@ const EventsPage = () => {
       {/* Lists */}
       <section className="lg:max-w-[85%] mx-auto w-full">
         {data.length === 0 ? (
-          <EmptyState tab={tab} />
+          <>
+            <h3 className="text-preset-3 font-medium">
+              {tab === "upcoming"
+                ? "No upcoming events (yet!)"
+                : "No past events to show"}
+            </h3>
+            <p className="text-preset-6 text-(--muted-text) mt-2">
+              {tab === "upcoming"
+                ? "Check back soon or subscribe for updates on the Contact page."
+                : "Once events wrap up, we'll list them here with slides and recordings."}
+            </p>
+          </>
         ) : (
           groupByMonth(data).map(([month, items]) => (
             <MonthSection key={month} month={month} items={items} />

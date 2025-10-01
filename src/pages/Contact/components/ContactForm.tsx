@@ -11,6 +11,13 @@ import {
   TOPIC_OPTIONS,
 } from "../schema/contactForm";
 import Loader from "../../../ui/Loader";
+import {
+  EMAILJS_PUBLIC_KEY,
+  EMAILJS_SERVICE_ID,
+  EMAILJS_TEMPLATE_ID,
+  emailJsConfigured,
+} from "../../../utils/emailJSsonfig";
+import emailjs from "@emailjs/browser";
 
 export default function ContactForm() {
   const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
@@ -32,11 +39,38 @@ export default function ContactForm() {
       setStatus("idle");
       setMsg("");
 
-      // TODO: call your API here
-      // const res = await fetch("/api/contact", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(values) });
-      // if (!res.ok) throw new Error("Failed");
+      // Honeypot: if a bot fills this hidden field, abort quietly
+      const honeypot = (
+        document.getElementById("hp_field") as HTMLInputElement | null
+      )?.value;
+      if (honeypot) {
+        setStatus("success"); // pretend success to avoid probing
+        setMsg("Thanks! We’ll be in touch soon.");
+        reset();
+        return;
+      }
 
-      await new Promise((r) => setTimeout(r, 600)); // demo
+      if (!emailJsConfigured) {
+        throw new Error("EmailJS env vars missing");
+      }
+
+      // EmailJS provides 200 emails/month
+      // Basin provides 50/month but with spam protection and other features
+
+      // The keys here must match your EmailJS template variable names
+      const params = {
+        name: values.name,
+        email: values.email,
+        topic: values.topic,
+        message: values.message,
+        // we need to create emailJS account and template to use this
+        // to_email: "genralis.ai@gmail.com",
+      };
+
+      await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, params, {
+        publicKey: EMAILJS_PUBLIC_KEY,
+      });
+
       setStatus("success");
       setMsg(`Thanks, ${values.name}! We’ll reply at ${values.email} soon.`);
       reset();

@@ -3,7 +3,7 @@ import { nextUpcoming } from "../../utils/events";
 import AboutCard from "./components/AboutCard";
 import EventCard from "../Events/components/EventCard";
 import HomePageFooter from "./components/HomePageFooter";
-import SubscribeBox from "../Contact/components/SubscribeBox";
+import SubscribeBox from "../../components/SubscribeBox";
 
 const HomePage = () => {
   const upcoming = nextUpcoming();

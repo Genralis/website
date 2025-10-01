@@ -1,6 +1,6 @@
 import ContactForm from "./components/ContactForm";
 import ReachOutInfo from "./components/reach-out-info";
-import SubscribeBox from "./components/SubscribeBox";
+import SubscribeBox from "../../components/SubscribeBox";
 
 export default function ContactPage() {
   return (

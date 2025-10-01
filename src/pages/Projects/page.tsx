@@ -3,10 +3,8 @@ import { projects } from "../../data/projects";
 import ProjectDetailCard from "./components/ProjectDetailCard";
 import Button from "../../ui/Button";
 import { TfiArrowCircleLeft, TfiArrowCircleRight } from "react-icons/tfi";
-// import type { Project } from "../../types/project";
 
 const ProjectsPage = () => {
-  // const projects: Project[] = useMemo(() => [], []);
   const [index, setIndex] = useState(0);
 
   const hasProjects = projects && projects.length > 0;

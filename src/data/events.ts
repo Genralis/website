@@ -1,5 +1,7 @@
 import type { EventItem } from "../types/events";
 
+// export const EVENTS: EventItem[] = [];
+
 export const EVENTS: EventItem[] = [
   {
     id: "kickoff-2025",
