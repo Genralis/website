@@ -4,7 +4,6 @@ import Button from "../../ui/Button";
 import type { EventItem } from "../../types/events";
 import { EVENTS } from "../../data/events";
 import { formatDateRange } from "../../utils/events";
-import { buildICS, downloadICS } from "../../utils/ics";
 import { MdArrowBackIosNew } from "react-icons/md";
 
 const EventDetailPage = () => {
@@ -19,7 +18,7 @@ const EventDetailPage = () => {
 
   if (!event) {
     return (
-      <div className="min-h-full w-full flex flex-col items-center justify-center gap-4 py-16">
+      <div className="page-container">
         <h1 className="text-preset-4 font-medium text-(--heading-text)">
           Event not found
         </h1>
@@ -37,31 +36,8 @@ const EventDetailPage = () => {
 
   const dateText = formatDateRange(event.start, event.end);
 
-  const handleAddToCalendar = () => {
-    const ics = buildICS(event);
-    downloadICS(event.title.replace(/\s+/g, "-"), ics);
-  };
-
-  const handleShare = async () => {
-    const url = window.location.href;
-    try {
-      if (navigator.share) {
-        await navigator.share({
-          title: event.title,
-          text: `${event.title} — ${dateText} @ ${event.location}`,
-          url,
-        });
-      } else {
-        await navigator.clipboard.writeText(url);
-        alert("Link copied to clipboard");
-      }
-    } catch {
-      /* no-op */
-    }
-  };
-
   return (
-    <div className="min-h-full lg:max-w-6xl mx-auto w-full flex flex-col gap-10 lg:gap-14 mt-10 lg:mt-16">
+    <div className="page-container">
       {/* Breadcrumbs */}
 
       <div className="text-left">
@@ -102,37 +78,6 @@ const EventDetailPage = () => {
                 ))}
               </div>
             )}
-          </div>
-
-          {/* CTAs */}
-          <div className="flex flex-col sm:flex-row lg:flex-col gap-3 md:w-1/5 w-full">
-            <Button
-              variant="primary"
-              width="100%"
-              height="41px"
-              onClick={handleAddToCalendar}
-            >
-              Add to calendar
-            </Button>
-            {/* Hook this to your RSVP/registration page if you have it */}
-            <Button
-              variant="outlined"
-              color="var(--heading-text)"
-              width="100%"
-              height="41px"
-              onClick={() => alert("RSVP flow goes here")}
-            >
-              Register
-            </Button>
-            <Button
-              variant="outlined"
-              width="100%"
-              height="41px"
-              color="var(--heading-text)"
-              onClick={handleShare}
-            >
-              Share
-            </Button>
           </div>
         </div>
       </header>

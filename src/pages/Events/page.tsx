@@ -11,10 +11,7 @@ const EventsPage = () => {
   const data = tab === "upcoming" ? upcoming : past;
 
   return (
-    <div
-      className="min-h-full max-w-[90%] lg:max-w-7xl w-full mx-auto
-     flex flex-col gap-8 lg:gap-12 mt-10 lg:mt-16"
-    >
+    <div className="page-container">
       <header className="w-full mx-auto text-center">
         <h1 className="font-semibold text-preset-7 text-[var(--heading-text)]">
           Events

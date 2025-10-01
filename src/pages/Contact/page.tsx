@@ -4,11 +4,7 @@ import SubscribeBox from "./components/SubscribeBox";
 
 export default function ContactPage() {
   return (
-    <div
-      className="max-w-[95%] lg:max-w-7xl min-h-full w-full 
-      flex flex-col gap-12 mx-auto lg:gap-16 my-10 lg:my-16
-      px-4 sm:px-6 lg:px-8 "
-    >
+    <div className="page-container">
       <header className="mx-auto text-center">
         <h1 className="font-semibold text-preset-7 text-(--heading-text)">
           Contact

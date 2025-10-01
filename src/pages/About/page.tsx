@@ -5,7 +5,7 @@ const AboutPage = () => {
   return (
     <>
       {/* Left: vertically centered by using full height + justify-center */}
-      <div className="min-h-full w-full flex flex-col gap-20 justify-center items-center m-10 lg:m-20 ">
+      <div className="page-container">
         {/* heading and tagline */}
         <div className="mx-auto text-center">
           <h1 className="font-semibold text-preset-7 text-(--heading-text)">

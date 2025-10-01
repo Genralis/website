@@ -6,6 +6,7 @@ import EventsPage from "../pages/Events/page";
 import Layout from "../pages/layout";
 import NotFound from "../pages/NotFound";
 import EventDetailPage from "../pages/EventsDetailPage/page";
+import ProjectsPage from "../pages/Projects/page";
 
 export const router = createBrowserRouter([
   {
@@ -28,6 +29,10 @@ export const router = createBrowserRouter([
       {
         path: "/contact",
         element: <ContactPage />,
+      },
+      {
+        path: "/projects",
+        element: <ProjectsPage />,
       },
       {
         path: "/events",
