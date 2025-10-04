@@ -19,7 +19,7 @@ const HomePage = () => {
           className="text-center mx-auto flex flex-col justify-center 
           max-w-3xl gap-12 my-10 lg:my-20"
         >
-          <h1 className="text-preset-7 text-(--heading-text)">
+          <h1 className="text-preset-7 text-(--heading-text) font-monserrat">
             Welcome to <span>Genralis</span>
           </h1>
 

@@ -44,7 +44,7 @@ export const buttonVariants = {
     `,
   icon: `
       bg-transparent
-      p-[4px
+      p-[4px]
   `,
 } as const;
 

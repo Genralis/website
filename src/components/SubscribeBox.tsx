@@ -2,12 +2,15 @@ import SubstackEmbed from "./SubStackEmbed";
 
 export default function SubscribeBox() {
   return (
-    <div className="bg-white w-full">
-      <p className="text-preset-6 [color:var(--subheading-text-1)] mt-1">
+    <div
+      className="rounded-[12px] overflow-hidden ring-1 ring-[var(--divider)] bg-white
+    flex flex-col items-center p-6 md:p-8 w-full"
+    >
+      <p className="text-preset-6 [color:var(--subheading-text-1)] text-center">
         Get event announcements & project opportunities. 1–2 emails/month.
       </p>
 
-      <div className="mt-4">
+      <div className="w-full">
         <SubstackEmbed src="https://genralis.substack.com/embed" />
       </div>
     </div>

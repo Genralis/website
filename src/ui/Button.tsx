@@ -59,7 +59,6 @@ const Button = ({
 
   const disabledClasses = disabled
     ? `
-      bg-(--btn-disabled-bg)
       text-(--btn-disabled-text)
       border-none
       cursor-not-allowed

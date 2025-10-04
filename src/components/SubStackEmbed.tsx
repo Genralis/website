@@ -6,14 +6,16 @@ interface Props {
 
 export default function SubstackEmbed({ src, height = 220 }: Props) {
   return (
-    <div className="rounded-[12px] overflow-hidden ring-1 ring-[var(--divider)] bg-white">
+    <div className="w-full">
       <iframe
         src={src}
-        height={height}
-        style={{ width: "100%", background: "transparent" }}
-        frameBorder="0"
-        scrolling="no"
         title="Substack subscribe"
+        width="100%" // ensure width without relying on inline style
+        height={height}
+        style={{ background: "transparent", border: "0" }}
+        loading="lazy" // improve perf
+        referrerPolicy="no-referrer-when-downgrade"
+        // NOTE: don't add sandbox—Substack needs storage/form features
       />
     </div>
   );
