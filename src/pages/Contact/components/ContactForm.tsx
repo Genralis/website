@@ -10,7 +10,6 @@ import {
   type ContactFormValues,
   TOPIC_OPTIONS,
 } from "../schema/contactForm";
-import Loader from "../../../ui/Loader";
 import {
   EMAILJS_PUBLIC_KEY,
   EMAILJS_SERVICE_ID,
@@ -72,7 +71,7 @@ export default function ContactForm() {
       });
 
       setStatus("success");
-      setMsg(`Thanks, ${values.name}! We’ll reply at ${values.email} soon.`);
+      setMsg(`Thanks, ${values.name}! We'll reply at ${values.email} soon.`);
       reset();
     } catch {
       setStatus("error");
@@ -87,10 +86,10 @@ export default function ContactForm() {
     >
       <h2 className="text-preset-3 mb-4">Send us a message</h2>
 
-      <div className="mb-2 h-[1.5rem] rounded-[12px]">
+      <div className="my-2 h-[2rem] rounded-[12px] ">
         {status === "success" && (
           <div
-            className="border border-green-300 bg-green-50 px-4 py-3 text-green-900 text-preset-5"
+            className="rounded-[12px] border border-green-300 bg-green-50 px-2 py-1 text-green-900 text-preset-5"
             role="status"
             aria-live="polite"
           >
@@ -99,7 +98,7 @@ export default function ContactForm() {
         )}
         {status === "error" && (
           <div
-            className="border border-red-300 bg-red-50 px-4 py-3 text-red-900"
+            className="rounded-[12px]  border border-red-300 bg-red-50 px-2 py-1 text-red-900 text-preset-5"
             role="alert"
             aria-live="polite"
           >
@@ -155,7 +154,7 @@ export default function ContactForm() {
 
         <div className="md:col-span-2 flex items-center gap-3">
           <Button variant="primary" disabled={isSubmitting}>
-            {isSubmitting ? `Sending ${(<Loader />)}` : "Send message"}
+            {isSubmitting ? `Sending ...` : "Send message"}
           </Button>
           <Button
             variant="outlined"
