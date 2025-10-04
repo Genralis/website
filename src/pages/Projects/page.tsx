@@ -21,21 +21,26 @@ const ProjectsPage = () => {
   return (
     <div className="page-container">
       {projects.length === 0 ? (
-        <>
+        <div
+          className="text-center mx-auto 
+        flex flex-col justify-center 
+          max-w-3xl gap-12 my-10"
+        >
           <div
-            className="text-preset-2 text-(--heading-text)
-            mx-auto text-center font-semibold"
+            className="text-preset-1 text-(--heading-text)
+            mx-auto text-center font-semibold font-monserrat
+            "
           >
             No Projects yet
           </div>
           <p
-            className="mt-2 text-preset-4 text-(--subheading-text-1)
+            className="mt-2 text-preset-3 text-(--subheading-text-1)
             mx-auto text-center"
           >
             Please check back later to see the exciting projects our team is
             working on!
           </p>
-        </>
+        </div>
       ) : (
         <>
           <PageHeading

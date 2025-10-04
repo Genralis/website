@@ -11,7 +11,7 @@ const PageHeading = ({
     <>
       <div
         className="text-center mx-auto flex flex-col justify-center 
-          max-w-3xl gap-12 my-10 lg:my-20"
+          max-w-3xl gap-12 my-10"
       >
         <h1 className="text-preset-7 text-(--heading-text) font-monserrat">
           {heading}
