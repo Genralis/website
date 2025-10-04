@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 export const socialMediaLinks = [
   {
@@ -10,5 +10,10 @@ export const socialMediaLinks = [
     label: "LinkedIn",
     url: "https://www.linkedin.com/company/genralis/",
     icon: FaLinkedin,
+  },
+  {
+    label: "Instagram",
+    url: "https://www.instagram.com/genralis.ai/",
+    icon: FaInstagram,
   },
 ];

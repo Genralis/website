@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import Button from "../../../ui/Button";
@@ -32,6 +32,17 @@ export default function ContactForm() {
     defaultValues: { name: "", email: "", topic: "General", message: "" },
     mode: "onSubmit",
   });
+
+  // 1) Auto-hide banner
+  useEffect(() => {
+    if (status === "success" || status === "error") {
+      const t = setTimeout(() => {
+        setStatus("idle");
+        setMsg("");
+      }, 8000);
+      return () => clearTimeout(t);
+    }
+  }, [status]);
 
   const onSubmit = async (values: ContactFormValues) => {
     try {
