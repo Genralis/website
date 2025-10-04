@@ -4,6 +4,7 @@ import AboutCard from "./components/AboutCard";
 import EventCard from "../Events/components/EventCard";
 import HomePageFooter from "./components/HomePageFooter";
 import SubscribeBox from "../../components/SubscribeBox";
+import PageHeading from "../../components/PageHeading";
 
 const HomePage = () => {
   const upcoming = nextUpcoming();
@@ -14,28 +15,11 @@ const HomePage = () => {
         className="min-h-full w-full my-10 lg:my-20
       flex flex-col gap-10 justify-center items-center"
       >
-        {/* heading and tagline */}
-        <div
-          className="text-center mx-auto flex flex-col justify-center 
-          max-w-3xl gap-12 my-10 lg:my-20"
-        >
-          <h1 className="text-preset-7 text-(--heading-text) font-monserrat">
-            Welcome to <span>Genralis</span>
-          </h1>
-
-          <p className="text-(--subheading-text-1) text-preset-2 font-semibold">
-            Empowering students through AI innovation, project collaboration,
-            and competitive excellence.
-          </p>
-
-          <p className="text-(--subheading-text-1) text-preset-2 font-semibold">
-            Genralis is an AI innovation club where students collaborate on
-            groundbreaking projects, participate in competitions, and build a
-            vibrant community of AI enthusiasts. We focus on practical AI
-            applications, machine learning projects, and fostering the next
-            generation of AI innovators.
-          </p>
-        </div>
+        <PageHeading
+          heading="Welcome to Genralis"
+          subheading="Empowering students through AI innovation, project collaboration, and competitive excellence."
+          description="Genralis is an AI innovation club where students collaborate on groundbreaking projects, participate in competitions, and build a vibrant community of AI enthusiasts. We focus on practical AI applications, machine learning projects, and fostering the next generation of AI innovators."
+        />
 
         {/* about cards */}
         <div className="bg-(--secondary-bg) w-full py-10 lg:py-20">

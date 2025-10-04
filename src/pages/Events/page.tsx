@@ -3,6 +3,7 @@ import { groupByMonth, splitEvents } from "../../utils/events";
 import { EVENTS } from "../../data/events";
 import TabButton from "./components/TabButton";
 import MonthSection from "./components/MonthSection";
+import PageHeading from "../../components/PageHeading";
 
 const EventsPage = () => {
   const [tab, setTab] = useState<"upcoming" | "past">("upcoming");
@@ -11,14 +12,11 @@ const EventsPage = () => {
 
   return (
     <div className="page-container">
-      <header className="w-full mx-auto text-center">
-        <h1 className="font-semibold text-preset-7 text-[var(--heading-text)]">
-          Events
-        </h1>
-        <p className="mt-3 text-preset-3 text-[var(--subheading-text-1)]">
-          Join workshops, competitions, project showcases, and more.
-        </p>
-      </header>
+      <PageHeading
+        heading="Events"
+        subheading="Join us for our upcoming events and explore past highlights."
+        description="Stay updated with our latest events, workshops, and meetups. Whether you're looking to learn, network, or showcase your skills, we have something for everyone!"
+      />
 
       {/* Tabs */}
       <div className="w-full text-center ">

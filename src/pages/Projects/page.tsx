@@ -3,6 +3,7 @@ import { projects } from "../../data/projects";
 import ProjectDetailCard from "./components/ProjectDetailCard";
 import Button from "../../ui/Button";
 import { TfiArrowCircleLeft, TfiArrowCircleRight } from "react-icons/tfi";
+import PageHeading from "../../components/PageHeading";
 
 const ProjectsPage = () => {
   const [index, setIndex] = useState(0);
@@ -37,15 +38,11 @@ const ProjectsPage = () => {
         </>
       ) : (
         <>
-          <header className="w-full mx-auto text-center">
-            <h1 className="font-semibold text-preset-7 text-[var(--heading-text)]">
-              Projects
-            </h1>
-            <p className="mt-3 text-preset-3 text-[var(--subheading-text-1)]">
-              Explore innovative AI projects developed by our members,
-              showcasing their creativity and technical skills.
-            </p>
-          </header>
+          <PageHeading
+            heading="Projects"
+            subheading="Explore innovative AI projects developed by our members."
+            description="Showcasing their creativity and technical skills."
+          />
 
           {/* Lists */}
           <section className="lg:max-w-[85%] mx-auto w-full">

@@ -1,3 +1,4 @@
+import PageHeading from "../../components/PageHeading";
 import { aboutCardsList } from "../../constants/aboutCardsList";
 import type { IconType } from "react-icons";
 
@@ -7,19 +8,11 @@ const AboutPage = () => {
       {/* Left: vertically centered by using full height + justify-center */}
       <div className="page-container">
         {/* heading and tagline */}
-        <div className="mx-auto text-center">
-          <h1 className="font-semibold text-preset-7 text-(--heading-text)">
-            About
-          </h1>
-
-          <p className="mt-4 text-(--subheading-text-1) text-preset-2">
-            Genralis is an AI innovation club where students collaborate on
-            groundbreaking projects, participate in competitions, and build a
-            vibrant community of AI enthusiasts. We focus on practical AI
-            applications, machine learning projects, and fostering the next
-            generation of AI innovators.
-          </p>
-        </div>
+        <PageHeading
+          heading="About Genralis"
+          subheading="Empowering students through AI innovation."
+          description="Genralis is an AI innovation club where students collaborate on groundbreaking projects, participate in competitions, and build a vibrant community of AI enthusiasts."
+        />
 
         {/* about cards */}
         <div
