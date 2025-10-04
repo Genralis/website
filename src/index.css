@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
 @import "tailwindcss";
 
 :root {
@@ -97,6 +99,10 @@
 
   /* Divider color */
   --divider: #e0e4e4;
+}
+
+@theme {
+  --font-monserrat: "Montserrat", sans-serif;
 }
 
 @layer components {

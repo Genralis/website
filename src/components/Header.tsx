@@ -1,11 +1,10 @@
 import MobileNavBar from "./MobileNavbar";
-import genralisText from "../assets/images/genralis-text.svg";
-import brainLogo from "../assets/images/brain-ai-logo.svg";
+import newLogo from "../assets/images/newLogo.svg";
 import Navbar from "./Navbar";
 import useIsMobile from "../hooks/useIsMobile";
 
 const Header = () => {
-  const isMobile = useIsMobile(640); // sm breakpoint
+  const isMobile = useIsMobile(950); // sm breakpoint
 
   return (
     <header
@@ -20,14 +19,19 @@ const Header = () => {
       {/* Left: Logo (absolute) */}
       <div
         className="absolute left-5 sm:left-8 md:left-12 lg:left-16 xl:left-20 
-      top-1/2 -translate-y-1/2 flex items-center gap-2"
+      flex  justify-center items-center gap-2"
       >
-        <img src={brainLogo} alt="Genralis brain logo" className="w-10 h-10" />
         <img
+          src={newLogo}
+          alt="Genralis logo"
+          className="w-12 h-12 object-contain"
+        />
+        {/* <img
           src={genralisText}
           alt="Genralis"
           className="w-32 sm:w-40 h-auto"
-        />
+        /> */}
+        {<span className="text-3xl font-[450] font-monserrat">GENRALIS</span>}
       </div>
 
       {/* Center: takes full width and truly centers content */}
@@ -36,7 +40,7 @@ const Header = () => {
       </div>
 
       {/* Right: Mobile menu (absolute on small screens only) */}
-      <div className="absolute right-5 sm:right-8 top-1/2 -translate-y-1/2">
+      <div className="absolute right-5 sm:right-8">
         {isMobile ? <MobileNavBar /> : null}
       </div>
     </header>

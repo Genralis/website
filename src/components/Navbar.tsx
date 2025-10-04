@@ -4,7 +4,7 @@ import { navItems } from "../constants/navItems";
 const NavBar = () => {
   return (
     <>
-      <div className="hidden md:flex pointer-events-auto w-full justify-center">
+      <div className="flex pointer-events-auto w-full justify-center">
         <nav className="">
           <ul
             className="px-3 text-sm font-medium rounded-full
@@ -14,7 +14,7 @@ const NavBar = () => {
                   shadow-lg flex justify-center space-x-4"
           >
             {navItems.map((item) => (
-              <li>
+              <li key={item.name}>
                 <NavLink
                   to={item.to}
                   className={({ isActive }) =>

@@ -3,12 +3,12 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 export const socialMediaLinks = [
   {
     label: "Github",
-    url: "#",
+    url: "https://github.com/Genralis",
     icon: FaGithub,
   },
   {
     label: "LinkedIn",
-    url: "#",
+    url: "https://www.linkedin.com/company/genralis/",
     icon: FaLinkedin,
   },
 ];

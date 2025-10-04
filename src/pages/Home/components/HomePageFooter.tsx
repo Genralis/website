@@ -12,9 +12,10 @@ const HomePageFooter = () => {
         <div
           className="w-full lg:w-4/5 max-w-8xl mx-auto
                   px-5 
-                  flex flex-col md:flex-row justify-between items-center gap-4"
+                  flex flex-col md:flex-row items-center 
+                  justify-between gap-4"
         >
-          <div className="w-full">
+          <div className="">
             <ul className="w-full mt-2 flex justify-start items-center gap-4">
               {socialMediaLinks.map((link) => (
                 <li key={link.label}>
@@ -31,20 +32,20 @@ const HomePageFooter = () => {
               ))}
             </ul>
           </div>
-          <div className="flex flex-col md:flex-row gap-4 md:gap-10">
+          <div className=" flex flex-col md:flex-row gap-4 md:gap-6">
             <div className="flex items-center gap-3">
-              <MdEmail />
+              <MdEmail size={"1.5rem"} />
               <a
                 href="mailto:genralis@university.edu"
-                className="text-preset-5 underline break-all"
+                className="text-preset-5 underline"
               >
                 genralis.ai@gmail.com
               </a>
             </div>
 
             <div className="flex items-center gap-3">
-              <FaMapLocationDot />
-              <div className="text-preset-5">
+              <FaMapLocationDot size={"1.5rem"} />
+              <div className="text-preset-5 no-word-break">
                 SDH lab, Engineering building
                 <br />
                 Memorial University of Newfoundland, St. John's
